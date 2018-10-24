@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block title %}WebPyRobot - Aide{% endblock %}
+
+{% block content %}
+  <div class="col s12 m9 l10 pad">
+    <div class="row z-depth-1 section padding-section" >
+      <div class="margTop col s12 m6 l6 center-align">
+        <a class="waves-effect waves-light btn-large" href="{% url "backend:documentation" %}">Documentation</a>
+      </div>
+      <div class="margTop col s12 m6 l6 center-align ">
+        <a class="waves-effect waves-light btn-large">Tutoriel</a>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
