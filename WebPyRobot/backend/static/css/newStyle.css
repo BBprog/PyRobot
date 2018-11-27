@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Roadtest";
+    src: url("../fonts/roadtest/roadtest.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "RobotCrush";
+    src: url("../fonts/robot_crush/Robot Crush Italic.ttf");
+}
+
+body {
+    background-color: #e6e6e6; !important
+}
+
+a {
+    color: black;
+}
+
+#nav-mobile .nav-elem {
+    font-size: 1.2em;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+#dashboard .svg-inline--fa, .btn-play .svg-inline--fa {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.btn-play {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 5px solid #ffeb3b;
+}
+.vertical-center {
+    line-height: 130px;
+}
+
+.bienvenue {
+    font-family: "Roadtest";
+    font-size: 8em;
+}
+
+.card {
+    max-width: 400px;
+    border-radius: 50%;
+}
+.card-image {
+    border-radius: 50%;
+}
+
+.align-center {
+    display: table;
+    margin: 0 auto;
+}
+
+.border-spaced {
+    margin: 10px;
+}
+
+.brand-logo {
+    font-family: "Roadtest";
+    font-size: 50px !important;
+}
+
+.btn-choice {
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+.btn-choice:checked {
+    background-color: #c6c6c6;
+}
+#versus .img-responsive {
+    max-width: 100px;
+}
+
+
+.checkbox-group {
+    position: relative;
+    border: 3px solid #c6c6c6;
+}
+.checkbox-group input {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+}
+.checkbox-group label::before {
+    display: none;
+}
+label + input[type="checkbox"] + label {
+    border-left: 2px solid #c6c6c6;
+}
+.checkbox-group label {
+    color: #263238;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    padding: 5px 20px;
+}
+.checkbox-group input[type="checkbox"]:checked + label {
+    background-color: #c6c6c6;
+}
+
+@media only screen and (max-width: 700px) {
+    h4 {
+        font-size: 1.5em;
+    }
+    h5 {
+        font-size: 1em;
+    }
+    .bienvenue {
+        font-size: 4em;
+    }
+    #logo-container {
+        display: none;
+    }
+    #versus .vertical-center {
+        line-height: 1.5em;
+    }
+}

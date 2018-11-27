@@ -24,12 +24,6 @@
 
     <ul id="index4" class="dropdown-content center">
         <li>
-            <a class="indigo-text darken-4" href="{% url 'backend:profile_perso' %}">
-                <i class="material-icons">portrait</i>
-                Mon profil
-            </a>
-        </li>
-        <li>
             <a class="indigo-text darken-4" href="{% url 'backend:change_password' %}">
                 <i class="fab fa-keycdn fa-lg"></i> Changer le mot de passe
             </a>
@@ -62,33 +56,33 @@
         </li>
     </ul>
 
-    <nav class="indigo darken-4" role="navigation">
+    <nav class="blue-grey darken-4" role="navigation">
         <div class="container nav-wrapper">
             <a href="/" class="brand-logo yellow-text" onclick="window.location.href='/'">PyRobot</a>
             {% if pageIn != 'documentation' and pageIn != 'faq' and pageIn != 'tutoriels' %}
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li>
-                        <a class="yellow-text dropdown-button" href="#" data-beloworigin="true" data-activates="index2">
-                            {{ point }}
-                            <i class="fab fa-product-hunt fa-lg"></i><i class="material-icons right">arrow_drop_down</i>
-                        </a>
+                        <div class="yellow-text nav-elem" href="#">
+                            <b>{{ point }}</b>
+                            <i class="fab fa-product-hunt fa-lg"></i>
+                        </div>
                     </li>
                     <li>
-                        <a class="yellow-text dropdown-button " href="#" data-beloworigin="true"
+                        <a class="nav-elem" href="{% url 'backend:profile_perso' %}">
+                            <i class="fas fa-user-circle fa-lg"></i> {{ user }}</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-button nav-elem" href="#" data-beloworigin="true"
                            data-activates="index3">
                             <i class="far fa-question-circle fa-lg"></i> Aide
                             <i class="material-icons right">arrow_drop_down</i>
                         </a>
                     </li>
                     <li>
-                        <a class="yellow-text dropdown-button" href="#" data-beloworigin="true" data-activates="index4"><i
-                                class="fas fa-user-circle fa-lg"></i> {{ user }}<i class="material-icons right">arrow_drop_down</i></a>
-                    </li>
-                    <!--<li>
-                        <a class="yellow-text dropdown-button" href="#" data-beloworigin="true" data-activates="index4">
+                        <a class="dropdown-button nav-elem" href="#" data-beloworigin="true" data-activates="index4">
                             <i class="fas fa-cog fa-lg"></i>
                         </a>
-                    </li>-->
+                    </li>
                 </ul>
                 <a href="#" data-activates="main_menu" class="button-collapse"><i class="material-icons">menu</i></a>
             {% else %}
