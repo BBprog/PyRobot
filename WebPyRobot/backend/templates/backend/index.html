@@ -42,6 +42,7 @@
 <div id="modalConnexion" class="modal">
     <div class="modal-content">
         <h4>Connexion</h4>
+        <div class="divider"></div><br>
         <form method="post" action="{% url 'backend:login' %}">
             <div class="row">
                 {% csrf_token %}
@@ -76,6 +77,7 @@
         <form action="{% url 'backend:signup' %}" method="post">
             {% csrf_token %}
             <h4>Inscription</h4>
+            <div class="divider"></div><br>
             <div class="row">
 
                 <!--{% for field in form %}
@@ -165,63 +167,28 @@
             </div>
 
             <div class="row center">
-                <a class="vertical-center center waves-effect blue-grey darken-4 waves-light modal-trigger yellow-text btn-play" href="#modalConnexion">
-                    <div class="img-play">
-                        <i class="fas fa-play"></i>
-                    </div>
+                <a class="center waves-effect blue-grey darken-4 waves-light modal-trigger yellow-text btn-play" href="#modalConnexion">
+                    Jouer
                 </a>
             </div>
 
             <div class="section">
-                <div class="row lighten-5">
-                    <!--MODIF-->
-                     <div class="col s8">
-                         <h5>
-                            Sur notre site nous vous proposons de programmer, en langage Python,
-                            le comportement d'un tank. Pour pimenter votre expérience, mesurez vous aux autres
-                            utilisateurs de notre site et voyez le fruit de votre travail par le biais de
-                            combats. Vos tanks seront placés dans une arène où se livrera un combat sans merci.
-                        </h5>
-                         <br><br>
-                        <h5>
-                            Le joueur qui aura programmé le meilleur tank gagnera la partie et
-                            se verra octroyer des points de victoire le faisant monter au classement dans la ligue
-                            choisie.<br><br>
+                <div class="row lighten-5 center" style="margin:0 auto;max-width: 600px">
+                     <h5>
+                        Sur notre site nous vous proposons de programmer, en langage Python,
+                        le comportement d'un tank. Pour pimenter votre expérience, mesurez vous aux autres
+                        utilisateurs de notre site et voyez le fruit de votre travail par le biais de
+                        combats. Vos tanks seront placés dans une arène où se livrera un combat sans merci.
+                    </h5>
+                     <br><br>
+                    <h5>
+                        Le joueur qui aura programmé le meilleur tank gagnera la partie et
+                        se verra octroyer des points de victoire le faisant monter au classement dans la ligue
+                        choisie.<br><br>
 
-                            La bataille est déjà lancée !!
-                            <br><br>Que le meilleur programmeur gagne !!
-                        </h5>
-                         <br><br><br><br><br><br>
-                     </div>
-                    <div class="col s4 center-align">
-                        <!--
-                        <h5>
-                            Envie d'apprendre un langage de programmation ? S'initier à la programmation ?
-                            Vous êtes au bon endroit ! Pour vous, nous avons choisis la méthode d'apprentissage
-                            par le jeu. Les jeux probots, crobots, etc, sont une manière ludique d'apprendre
-                            un langage de programmation. Le langagege Python s'impose de plus en plus dans le
-                            monde de l'éducation; pour apprendre aux novices les rudiments de la programmation.
-                        </h5>
-                        <br><br>
-                        <h5>
-                            Sur notre site nous vous proposons de programmer, dans ce langage,
-                            le comportement d'un tank. Pour pimenter votre expérience, mesurez vous aux autres
-                            utilisateurs de notre site et voyez le fruit de votre travail par le biais d'un
-                            combat. Vos tanks seront placés dans une arène où se livrera un combat sans merci.
-                        </h5>
-                        <br><br>
-                        <h5>
-                            Le joueur qui aura programmé le meilleur tank gagnera la partie et
-                            se verra octroyer des points de victoire le faisant monter au classement dans la ligue
-                            choisie.
-                            Un système de "Test" est disponible, si vous souhaitez vous mesurer à l'ordinateur
-                            dont le niveau sera équivalent au vôtre.<br><br>
-
-                            La bataille est déjà lancée !!
-                            <br><br>Que le meilleur programmeur gagne !!
-                        </h5>
-                        -->
-                    </div>
+                        La bataille est déjà lancée !!
+                        <br><br>Que le meilleur programmeur gagne !!
+                    </h5>
                 </div>
             </div>
         </div>

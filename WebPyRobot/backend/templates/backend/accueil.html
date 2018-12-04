@@ -114,7 +114,8 @@
             <div>
                 {% csrf_token %}
                 <div class="modal-content">
-                    <h4 class="center">Entraînement</h4>
+                    <h4>Entraînement</h4>
+                    <div class="divider"></div><br>
                     <div class="row">
                         <div class="col s12 m4 l4">
                             <img src="/static/img/user_avatar/default.png" alt="{{ current_user.avatar }}"
@@ -126,13 +127,13 @@
                         </div>
                         <div class="col s12 m4 l4">
                             <div class="col s6 m12 l12 align-center btn-choice">
-                                <a onClick="optionSelect(0)" class="">
+                                <a onClick="optionSelect(0)">
                                     <img class="img-responsive align-center" src="/static/img/user.svg" width=100%/>
                                     <p class="center">Joueur</p>
                                 </a>
                             </div>
                             <div class="col s6 m12 l12 align-center btn-choice">
-                                <a onClick="optionSelect(1)" class="btn-choice">
+                                <a onClick="optionSelect(1)">
                                     <img class="img-responsive align-center" src="/static/img/laptop.svg" width=100%/>
                                     <p class="center">IA</p>
                                 </a>
@@ -238,38 +239,17 @@
             </div>
         </form>
     </div>
-<!--
-    <div id="editor" class="modal modal-fixed-footer">
-        <div class="modal-content">
-            <h4>Vos Codes</h4>
-            <div class="collection">
-                {% for script in scripts %}
-                    <p>
-                        <a onclick="window.location.href='/editor/?script={{ script.pk }}'"
-                           class="collection-item black-text" style="cursor:pointer">
-                            {{ script.name|truncatechars:22 }}
-                            {% if script.name ==  active_script.name %}
-                                <span class="new badge blue-grey yellow-text darken-4" data-badge-caption="Actif"></span>
-                            {% endif %}
-                        </a>
-                    </p>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="modal-footer">
-            <a class="waves-effect waves-teal btn-flat" onclick="window.location.href='/editor/'">Éditeur</a>
-        </div>
-    </div>
--->
+
     <div id="championnat" class="modal modal-fixed-footer">
         <form action="{% url 'backend:select_player_for_championship' %}" method="POST">
             <div>
                 {% csrf_token %}
                 <div class="modal-content">
-                    <h4 class="center">{{ championnat|truncatechars:50 }}<span class="badge"
+                    <h4>{{ championnat|truncatechars:50 }}<span class="badge"
                                                                 onclick="window.location.href='/championnat'"
                                                                 style="cursor: pointer"><i class="fas fa-cog fa-2x"></i></span>
                     </h4>
+                    <div class="divider"></div><br>
                     <!--<p>Liste des joueurs du championnat et leur classement</p>-->
                     <p>Le code "{{ active_script.name }}" est engagé dans le championnat.</p>
                     <nav class="blue-grey darken-4">
@@ -359,19 +339,26 @@
         var selectedOption = 0;
         function optionSelect (option) {
             if (option == selectedOption) return;
+
+            var ia = $("#ia-select");
+            var player = $("#player-select");
+
             switch(option) {
             case 0:
-                $("#ia-select").fadeOut(500, function() {
-                    $("#player-select").fadeIn(500);
-                });
+                fadeReplace(ia, player);
                 break;
             case 1:
-                $("#player-select").fadeOut(500, function() {
-                    $("#ia-select").fadeIn(500);
-                });
+
+                fadeReplace(player, ia);
                 break;
             }
             selectedOption = option;
+        }
+
+        function fadeReplace (div1, div2) {
+            div1.fadeOut(500, function() {
+                div2.fadeIn(500);
+            });
         }
 
         $(document).ready(function(){

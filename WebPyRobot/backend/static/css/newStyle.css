@@ -14,7 +14,7 @@ body {
 }
 
 a {
-    color: black;
+    color: blue;
 }
 
 #nav-mobile .nav-elem {
@@ -29,11 +29,26 @@ a {
 }
 
 .btn-play {
-    width: 130px;
-    height: 130px;
     border-radius: 50%;
-    border: 5px solid #ffeb3b;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    background: #cb4e4e;
+    color: #fff;
+    box-shadow: 0 6px #b6b6b6;
+    transition: none;
+    border: none;
+
+    background: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    line-height: 100px;
 }
+
 .vertical-center {
     line-height: 130px;
 }
@@ -69,6 +84,8 @@ a {
     height: 100px;
     width: 100px;
     cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #c6c6c6;
 }
 .btn-choice:checked {
     background-color: #c6c6c6;
@@ -106,10 +123,10 @@ label + input[type="checkbox"] + label {
 
 @media only screen and (max-width: 700px) {
     h4 {
-        font-size: 1.5em;
+        font-size: 1.5em !important;
     }
     h5 {
-        font-size: 1em;
+        font-size: 1em !important;
     }
     .bienvenue {
         font-size: 4em;
@@ -119,5 +136,8 @@ label + input[type="checkbox"] + label {
     }
     #versus .vertical-center {
         line-height: 1.5em;
+    }
+    #versus .img-responsive {
+        max-width: 80px;
     }
 }

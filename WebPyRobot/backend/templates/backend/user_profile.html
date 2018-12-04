@@ -42,6 +42,9 @@
                         <div class="col s12 m4 l4">
                             <p><i class="fas fa-thumbs-down red-text"></i> {{ nb_lose }} défaites</p>
                         </div>
+                        <a style="cursor:pointer" class="center waves-effect darken-4"
+                           href="{% url 'backend:battle_histories' %}">
+                            Consulter l'historique des combats</a>
                     </div>
                     <div class="col s12 m6 l6">
                         <h4 class="center-align">Informations personnelles</h4>
@@ -55,10 +58,6 @@
             </div>
 
         </div>
-    </div>
-    <div class="col s12 m2 l2">
-        <br/>
-        <br/>
     </div>
     <div id="avatar_img" class="modal">
         <div class="modal-content">
